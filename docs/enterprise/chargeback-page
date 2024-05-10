@@ -1,0 +1,84 @@
+---
+title: Understand the chargeback reporting
+description: Learn how to read the Microsoft Fabric chargeback reporting.
+author: KesemSharabi
+ms.author: kesharab
+ms.topic: how to
+ms.custom:
+  - build-2023
+  - ignite-2023
+ms.date: 05/10/2024
+no-loc: [Copilot]
+---
+
+# Understand the chargeback reporting
+
+Fabric Chargeback app is designed to provide the ability to see the usage of capacities over different scenarios like metric types, dates, operation names etc. Users can drill-through to analyze more on workspace and item level.
+
+You must be a capacity admin in order to install the Fabric chargeback app. Once installed, the app can be shared with any member of the organization with the necessary access permissions.
+
+>[!NOTE]
+>Items with same name can be present across workspaces and capacities with unique Item Ids. Repetition of same Item name can be seen in visuals if they have distinct Item Ids.
+
+The Fabric chargeback report has five pages:
+
+* **Chargeback**
+* **Workspace Details**
+* **Item Details**
+* **Export Data**
+* **Help**
+
+This page provides utilization details of capacity, workspace and Items. Utilization refers to CU processing time in seconds required to complete any activity or action.
+The term utilization % shows the ratio of utilization for selected scope or Item to the tenant level utilization.
+
+## Filters
+The following slicers are provided at the top of the chargeback page:
+
+Capacity Name - Select the capacities. The app displays information related to the selected capacities.
+Date Range -  Select the date range. The app displays results for the selected date range.
+Top N - To change the number of workspaces or item with the Highest utilization you want to review.
+Item Kind - Select the item kind. The app displays information related to the selected item kind.
+Operation Name - Select the operation name. The app displays information related to the selected operation name.For more information you can refer here.
+Billing type - Select the billing type to see if the item are billable or not.
+Virtualized item - Select virtualization type to see if the item is Virtualized or not.
+
+Reset filter feature is also included at the top right of page to clear all the slicers.
+
+In addition to the filters mentioned earlier, there are three slicers available in the filter pane.
+
+* **Item Id** - Select the Items. The app displays information related to the selected items.
+* **Workspace Id** - Select the workspaces. The app displays information related to the selected workspaces.
+* **Virtualized Workspace** - Select virtualization type to see if the Workspace is Virtualized or not.
+
+## Cards
+After the Slicers section, the KPIs (Key Performance Indicators) are displayed using card visuals.
+
+Capacity: Total number of capacities.
+Workspaces: Total number of workspaces.
+Items: Total number of Items.
+
+### Top N workspaces/Items by utilization (CU) %
+  
+The workspace name and utilization % are shown in this table according to the workspace and Item selections in the top bar slicers. Below that, there is a "Explore" option to explore more details about workspaces and Items.
+
+If users want to observe how a certain workspace is being used, then they need to select that workspace and hit Explore button.
+
+### Utilization (CU) by date
+
+This stack column chart shows the daily usage of the utilization by date slicer.
+
+### Matrix For Utilization (CU) details
+
+The following matrix table shows utilization and utilization %, which can be visualized over Month, Week, and Day using given buttons and according to the slicers available at the top of page expect Top N slicer. 
+Drill-down up to Billing type is available. Hovering over user column field will showcase activities of each user associated with capacity:
+
+* **Utilization (CU)**: This is a metric value based on CPU processing time in seconds utilized by the selected Item for processing.
+
+* **Utilization (CU) %**: Ratio of Utilization for selected scope or Item and the total Utilization of the tenant in percentage.
+
+* **Users**: This is number of distinct users associated with consumption for Item. Hovering over this field will showcase user level distribution of activities.
+
+* **Users %**: Percentage ratio of distinct users associated with consumption for Item and total distinct users for selected scope.
+
+
+## Related content
